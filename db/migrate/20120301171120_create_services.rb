@@ -1,5 +1,5 @@
 class CreateServices < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :services do |t|
       t.integer :user_id
       t.string :provider
@@ -9,9 +9,5 @@ class CreateServices < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
-
-  def self.down
-    drop_table :services
   end
 end
